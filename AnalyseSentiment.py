@@ -3,6 +3,12 @@ import pandas as pd
 from textblob import TextBlob
 from django.utils import encoding
 import numpy as np
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--search', help='Enter the string to be searched')
+parser.add_argument('--max', help='Maximum number of tweets in the CSV file')
+args = parser.parse_args()
 
 # Replace with the appropriate values
 consumer_key = 'yw7pVgmcZjmUPIiPa8Xlix4uw'
@@ -10,10 +16,10 @@ consumer_secret = 'LsrBZ9vuqyvUt52iPBLqJu9ZUzmJWnwWRZWRYzbY3rMIhNXXp'
 access_token = '463003169-Z1nYJdEb4s79eYOCJVvuSEiAMv7smjoTjjeReJHA'
 access_token_secret = 'D2rRhHnOONXBLlWThLv6iDbanbo1Jd40IkFhgj2Uull3n'
 
-max_size = 10  # Maximum number of tweets in the CSV file
+max_size = int(args.max)  # Maximum number of tweets in the CSV file
 pos_sent_th = 0.3  # Threshold for positive tweets
 neg_sent_th = -pos_sent_th  # Threshold for negative tweets
-search = 'India'  # Change the string to get a csv file with a different search result
+search = str(args.search)  # Change the string to get a csv file with a different search result
 mat = np.array(['Statement', 'Sentiment'])  # numpy variable to store all the tweets
 count = 1  # Used to count the number of tweets
 

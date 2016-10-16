@@ -55,8 +55,8 @@ class MyStreamListener(tweepy.StreamListener):
 
         # Check if the number of tweets have crossed the maximum value
         if count > max_size:
-            df = pd.DataFrame(mat[1:], columns=[mat[0]])
-            df.to_csv('{}.csv'.format(search))
+            df = pd.DataFrame(mat[1:], columns=[mat[0]])  # convert the numpy matrix to pandas dataframe
+            df.to_csv('{}.csv'.format(search))  # save the dataframe as a csv file
             exit()
 
 

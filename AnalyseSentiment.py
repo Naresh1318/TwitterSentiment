@@ -7,7 +7,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--search', help='Enter the string to be searched')
-parser.add_argument('--max', help='Maximum number of tweets in the CSV file')
+parser.add_argument('--max', help='Maximum number of tweets in the CSV file ')
 args = parser.parse_args()
 
 # Replace with the appropriate values

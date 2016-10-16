@@ -11,10 +11,10 @@ parser.add_argument('--max', type=int, help='Maximum number of tweets in the CSV
 args = parser.parse_args()
 
 # Replace with the appropriate values
-consumer_key = 'yw7pVgmcZjmUPIiPa8Xlix4uw'
-consumer_secret = 'LsrBZ9vuqyvUt52iPBLqJu9ZUzmJWrnwWRZWRYzbY3rMIhNXXp'
-access_token = '463003169-Z1nYJdEb4s79eYOCJVvuSEiAMv7smjoTjjeReJHA'
-access_token_secret = 'D2rRhHnOONXBLlWThLv6iDbanbo1Jd40IkFhgj2Uull3n'
+consumer_key = '####'
+consumer_secret = '####'
+access_token = '####'
+access_token_secret = '####'
 
 max_size = args.max  # Maximum number of tweets in the CSV file
 pos_sent_th = 0.3  # Threshold for positive tweets

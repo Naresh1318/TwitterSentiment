@@ -1,5 +1,5 @@
 # TwitterSentiment
-Creates a CSV file based on the serach result
+Creates a CSV file based on the search result
 
 ##Dependencies
 
